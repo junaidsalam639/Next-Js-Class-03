@@ -10,6 +10,7 @@ const page = () => {
     <div>
       {
         fecth.products.map((data , index) => {
+          console.log(data.id);
             return(
                 <>
                 <Link key={index} href={`user/${data.id}`}>
