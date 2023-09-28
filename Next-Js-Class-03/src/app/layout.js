@@ -1,4 +1,5 @@
 import AuthContext from './context/AuthContext'
+import CountContext from './context/CountContext'
 import ThemeContext from './context/ThemeContext'
 import './globals.css'
 import { Inter } from 'next/font/google'
@@ -14,11 +15,13 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={inter.className}>
+        <CountContext>
         <ThemeContext>
           <AuthContext>
             {children}
           </AuthContext>
         </ThemeContext>
+        </CountContext>
       </body>
     </html>
   )

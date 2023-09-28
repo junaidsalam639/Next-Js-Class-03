@@ -5,10 +5,9 @@ export const Theme = createContext();
 
 export default function ThemeContext ({children}){
     const [theme , setTheme] = useState('red');
-    const [count , setCount] = useState(0);
     return(
         <>
-        <Theme.Provider value={{theme , setTheme , count , setCount}}>
+        <Theme.Provider value={{theme , setTheme}}>
             {children}
         </Theme.Provider>
         </>
