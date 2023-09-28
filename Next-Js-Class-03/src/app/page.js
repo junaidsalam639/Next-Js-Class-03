@@ -3,11 +3,12 @@ import { Theme } from './context/ThemeContext';
 import { Auth } from './context/AuthContext';
 import { Count } from './context/CountContext';
 import { useContext } from 'react';
+
 export default function Home() {
   const {theme , setTheme} = useContext(Theme);
   const {user , setUser} = useContext(Auth);
   const {count , setCount} = useContext(Count);
- 
+
   const Increament = () => {
     setCount(count + 1)
   }

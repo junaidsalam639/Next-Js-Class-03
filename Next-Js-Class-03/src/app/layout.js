@@ -1,3 +1,4 @@
+import ApiFecth from './context/ApiFecth'
 import AuthContext from './context/AuthContext'
 import CountContext from './context/CountContext'
 import ThemeContext from './context/ThemeContext'
@@ -15,6 +16,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={inter.className}>
+        <ApiFecth>
         <CountContext>
         <ThemeContext>
           <AuthContext>
@@ -22,6 +24,7 @@ export default function RootLayout({ children }) {
           </AuthContext>
         </ThemeContext>
         </CountContext>
+        </ApiFecth>
       </body>
     </html>
   )
